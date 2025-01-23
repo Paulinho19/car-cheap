@@ -5,12 +5,13 @@ import { CustomButtonProps } from "@/types";
 export default function CustomButton({
   title,
   containerStyles,
+  btnType,
   handleClick,
 }: CustomButtonProps) {
   return (
     <button
       disabled={false}
-      type="button"
+      type={btnType || "button"}
       className={`custom-btn ${containerStyles}`}
       onClick={handleClick}
     >
